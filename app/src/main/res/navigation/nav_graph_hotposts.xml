@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/PostFragment">
+
+    <fragment
+        android:id="@+id/PostFragment"
+        android:name="com.example.androidcodingchallangetinder.features.hotposts.ui.PostsListFragment"
+        android:label="@string/hotPostsFragmentLabel"
+        tools:layout="@layout/fragment_posts_list">
+
+        <action
+            android:id="@+id/action_to_postsFragment"
+            app:destination="@id/DetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/DetailsFragment"
+        android:name="com.example.androidcodingchallangetinder.features.hotposts.ui.PostDetailsFragment"
+        android:label="@string/hotPostsDetailsFragmentLabel"
+        tools:layout="@layout/fragment_post_details">
+
+        <action
+            android:id="@+id/action_to_DetailsFragment"
+            app:destination="@id/PostFragment" />
+    </fragment>
+</navigation>
